@@ -72,6 +72,8 @@ setup(
         'xlwt >= 1.3',
         'coolprop >= 6.0',
         'requests',
+        'click',
+        'tqdm'
     ],
     tests_require=[
         'pytest',
@@ -87,4 +89,8 @@ setup(
             'restructuredtext-lint',
         ],
     },
+    entry_points='''
+        [console_scripts]
+        pygaps=pygaps.cli:cli
+    ''',
 )
